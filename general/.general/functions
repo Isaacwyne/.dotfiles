@@ -1,0 +1,54 @@
+### ARCHIVE EXTRACTION
+# Usage: ex <file>
+ex () {
+    if [ -f "$1" ]; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1   ;;
+        *.tar.gz)    tar xzf $1   ;;
+        *.bz2)       bunzip2 $1   ;;
+        *.rar)       unrar x $1   ;;
+        *.gz)        gunzip $1    ;;
+        *.tar)       tar xf $1    ;;
+        *.tbz2)      tar xjf $1   ;;
+        *.tgz)       tar xzf $1   ;;
+        *.zip)       unzip $1     ;;
+        *.Z)         uncompress $1;;
+        *.7z)        7z x $1      ;;
+        *.deb)       ar x $1      ;;
+        *.tar.xz)    tar xf $1    ;;
+        *.tar.zst)   unzstd $1    ;;
+        *)           echo "'$1' cannot be extracted via ex()" ;;
+      esac
+    else
+      echo "'$1' is not a valid file"
+    fi
+}
+
+    ##### Youtube videos' download #####
+function yt-vid() {
+    yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" -o '~/Videos/%(title)s.%(ext)s' $*
+}
+
+function yt-video() {
+    yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --merge-output-format mp4 -o '~/Videos/%(title)s.%(ext)s' $*
+}
+
+function yt-audio() {
+    yt-dlp -f 'ba' -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' $*
+}
+
+##### VIDEO CONVERSION #####
+
+##### Converting a single video using ffmpeg #####
+function convert() {
+  for item in $*;
+  do ffmpeg -i "$item" "${item%.*}.mp3"
+  done
+}
+
+    ##### Batch video conversion using ffmpeg #####
+function convertall() {
+  for item in *.mp4;
+  do ffmpeg -i "$item" "${item%.*}.mp3"
+  done
+}
