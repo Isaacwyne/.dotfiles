@@ -26,14 +26,10 @@ ex () {
 
     ##### Youtube videos' download #####
 function yt-vid() {
-    yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" -o '~/Videos/%(title)s.%(ext)s' $*
+    yt-dlp -f "best[height>=720]" -o '~/Videos/%(title)s.%(ext)s' $*
 }
 
-function yt-video() {
-    yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --merge-output-format mp4 -o '~/Videos/%(title)s.%(ext)s' $*
-}
-
-function yt-audio() {
+function yt-aud() {
     yt-dlp -f 'ba' -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' $*
 }
 

@@ -1,0 +1,14 @@
+# Do not copy the modification time
+--no-mtime
+
+# bypass geographical restrictions
+--geo-bypass
+
+# show progress bar, even if in quiet mode
+--progress
+
+# location of the ffmpeg binary
+--ffmpeg-location '/home/easy/Downloads/yt-dlp_ffmpeg/ffmpeg-master-latest-linux64-gpl/bin'
+
+# embed video thumbnail into the file
+--embed-thumbnail

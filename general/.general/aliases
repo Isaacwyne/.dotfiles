@@ -1,26 +1,17 @@
-# omz
 alias pip='pip3'
-alias cat='bat'
-alias code='codium'
-alias zshconfig="nvim ~/.zshrc"
-alias bashconfig="nvim ~/.bashrc"
-
-# pacman and yay
-alias pacsyu='sudo pacman -Syyu'                  # update only standard pkgs
-alias yaysua='yay -Sua --noconfirm'               # update only AUR pks (yay)
-alias yaysyu='yay -Syu --noconfirm'               # update both standard and yay pkgs (yay)
-alias unlock='sudo rm /var/lib/pacman/db.lck'     # remove pacman lock
-alias cleanup='sudo pacman -Rns $(pacman -Qdtq)'  # remove orphaned pkgs
+alias cat='batcat'
+alias zshconf='nvim ~/.zshrc'
+alias bshconf='nvim ~/.bashrc'
 
 # confirm before overwriting something
-alias cp="cp -i"
+alias cp='cp -i'
 alias mv='mv -i'
 
 # adding flags
-alias df='df -h'                                # human-readable sizes
-alias free='free -m'                            # show sizes in MBs
+alias df='df -h'        # human-readable sizes
+alias free='free -m'    # show sizes in MBs
 
-# changing "ls" to "lsd"
+# changing 'ls' to 'lsd'
 alias ls='lsd'
 alias l='ls -lh'
 alias ll='ls -lAh'
@@ -29,22 +20,23 @@ alias lm='ls -m'
 alias lr='ls -R'
 alias lg='ls -l --group-dirs first'
 
-# coloring
+## coloring
 # grep
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
 # others
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 
-# ps
-alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+## Processes
+alias psa='ps auxf'
+alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias psmem='ps -auxf | sort -nr -k 4'
 alias pscpu='ps -auxf | sort -nr -k 3'
 
-# git
+## git
 alias addup='git add -u'
 alias gcl='git clone'
 alias gi='git init'
@@ -54,15 +46,3 @@ alias ga='git add'
 alias gall='git add .'
 alias gc='git commit -m'
 alias gp='git push'
-
-# get fast mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-
-# gpg encryption
-# verify signature for isos
-alias gpg-check="gpg --keyserver-options auto-key-retrieve --verify"
-# receive the key of the developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --verify"
