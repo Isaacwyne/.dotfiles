@@ -47,9 +47,9 @@ font-1 = "FontAwesome:size=13;4"
 font-2 = "JetBrainsMono Nerd Font:size=10;2"
 font-3 = "JetBrainsMono Nerd Font:size=10;2"
 
-modules-left = mode sep bspwm sep xwindow
-modules-center = date
-modules-right = volume sep cpu sep memory sep wlan sep eth sep battery sep powermenu
+modules-left = mode sep bspwm
+modules-center = xwindow
+modules-right = volume sep cpu sep memory sep wlan sep eth sep battery sep date sep powermenu
 
 separator = 
 spacing = 0
@@ -221,12 +221,12 @@ unknown-as-up = true
 format-connected = <ramp-signal> <label-connected>
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = "睊"
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${colors.red}
 
 label-connected = "%{A1:nmd &:}%essid%%{A}"
-label-disconnected = "%{A1:nmd &:}Disconnected%{A}"
+label-disconnected = "%{A1:nmd &:}%{A}"
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -247,17 +247,17 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = ""
 format-connected-prefix-font = 3
 format-connected-prefix-foreground = ${colors.cyan}
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = ""
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${colors.red}
 
-label-connected = "%{A1:networkmanager_dmenu &:}%downspeed% | %upspeed%%{A}"
-label-disconnected = "%{A1:networkmanager_dmenu &:}Offline%{A}"
+label-connected = "%{A1:networkmanager_dmenu &:}%{A}"
+label-disconnected = "%{A1:networkmanager_dmenu &:}%{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
