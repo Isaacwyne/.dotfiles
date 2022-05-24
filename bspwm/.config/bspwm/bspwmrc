@@ -47,7 +47,7 @@ for i in ${code[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
 
 # 5 > office and docs
-declare -a office=(Atril)
+declare -a office=(Atril DesktopEditors)
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 

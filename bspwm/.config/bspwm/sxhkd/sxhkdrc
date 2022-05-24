@@ -1,10 +1,10 @@
 # terminal emulator
-super + Return
+ctrl + shift + t
   xfce4-terminal
 
-# program launcher
-alt + F1
-  dmenu_run
+# rofi
+super + Return
+  rofi -show drun
 
 ##---------- Applications -----------##
 
