@@ -85,6 +85,7 @@ type = internal/xwindow
 label = %title:0:15:...%
 label-padding = 1
 label-background = ${colors.altblack}
+label-underline = ${colors.blue}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
