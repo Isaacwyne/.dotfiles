@@ -49,7 +49,7 @@ font-3 = "JetBrainsMono Nerd Font:size=10;2"
 
 modules-left = mode sep bspwm
 modules-center = xwindow
-modules-right = volume sep cpu sep memory sep wlan sep eth sep battery sep date sep powermenu
+modules-right = volume sep wlan sep eth sep battery sep date sep powermenu
 
 separator = 
 spacing = 0
