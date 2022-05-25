@@ -65,7 +65,9 @@ for i in ${media[@]}; do
   bspc rule -a $i desktop='^8' follow=on focus=on; done
 
 # 9 > Images
-bspc rule -a Viewnior desktop='^9' follow=on focus=on
+declare -a graphics=(Ld-linux-x86-64.so.2 Viewnior Gimp-2.10)
+for i in ${graphics[@]}; do
+  bspc rule -a $i desktop='^9' follow=on focus=on; done
 
 # floating applications
 bspc rule -a feh state=floating
@@ -81,6 +83,10 @@ xsettingsd &
 
 # run keybindings daemon
 sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc &
+
+# Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # restore wallpaper
 bash $HOME/.fehbg

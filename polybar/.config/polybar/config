@@ -219,21 +219,26 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <ramp-signal> <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.red}
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "睊"
-format-disconnected-prefix-font = 3
+format-disconnected-prefix-font = 5
 format-disconnected-prefix-foreground = ${colors.red}
 
 label-connected = "%{A1:nmd &:}%essid%%{A}"
 label-disconnected = "%{A1:nmd &:}%{A}"
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-font = 3
+ramp-signal-0 = ▁
+ramp-signal-1 = ▂
+ramp-signal-2 = ▃
+ramp-signal-3 = ▄
+ramp-signal-4 = ▅
+ramp-signal-5 = ▆
+ramp-signal-6 = ▇
+ramp-signal-7 = █
+ramp-signal-font = 5
 ramp-signal-foreground = ${colors.cyan}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -248,12 +253,12 @@ unknown-as-up = true
 
 format-connected = <label-connected>
 format-connected-prefix = ""
-format-connected-prefix-font = 3
+format-connected-prefix-font = 5
 format-connected-prefix-foreground = ${colors.cyan}
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = ""
-format-disconnected-prefix-font = 3
+format-disconnected-prefix-font = 5
 format-disconnected-prefix-foreground = ${colors.red}
 
 label-connected = "%{A1:networkmanager_dmenu &:}%{A}"
@@ -295,7 +300,7 @@ format-volume = <ramp-volume> <label-volume>
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
-format-muted-prefix-font = 2
+format-muted-prefix-font = 4
 format-muted-prefix-foreground = ${colors.red}
 
 label-volume = %percentage%%
@@ -312,7 +317,7 @@ ramp-volume-6 = 墳
 ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
-ramp-volume-font = 2
+ramp-volume-font = 4
 ramp-volume-foreground = ${colors.blue}
 
 ramp-headphones-0 = 

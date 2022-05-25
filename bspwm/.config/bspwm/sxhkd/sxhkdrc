@@ -1,9 +1,9 @@
 # terminal emulator
-ctrl + shift + t
+super + Return
   xfce4-terminal
 
 # rofi
-super + Return
+alt + F1
   rofi -show drun
 
 ##---------- Applications -----------##
