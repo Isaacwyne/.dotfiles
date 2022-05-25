@@ -81,6 +81,11 @@ $HOME/.config/polybar/launch.sh &
 # Launch xsettingsd daemon
 xsettingsd &
 
+# polkit agent
+if [[ ! `pidof lxpolkit` ]]; then
+  /usr/bin/lxpolkit &
+fi
+
 # run keybindings daemon
 sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc &
 
