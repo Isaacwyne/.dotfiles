@@ -38,6 +38,17 @@ ctrl + alt + Escape
 ctrl + alt + l
   betterlockscreen --lock
 
+##---------- System keys ----------##
+# Volume control
+XF86AudioRaiseVolume
+	pactl -- set-sink-volume 0 +5%
+
+XF86AudioLowerVolume
+        pactl -- set-sink-volume 0 -5%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+	
 ##---------- Bspwm ----------##
 
 # alternate between the tiled and monocle layout

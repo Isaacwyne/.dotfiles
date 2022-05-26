@@ -98,3 +98,10 @@ bash $HOME/.fehbg
 
 # start picom
 picom --config $HOME/.config/bspwm/picom/picom.conf &
+
+# launch the notifications daemon (dunst)
+if [[ `pidof dunst` ]]; then
+  pkill dunst
+fi
+
+dunst -config $HOME/.config/bspwm/dunstrc &
