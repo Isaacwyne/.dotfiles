@@ -374,8 +374,8 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
+label-open = ⏻
+label-open-foreground = ${colors.red}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |

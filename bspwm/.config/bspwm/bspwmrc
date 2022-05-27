@@ -9,7 +9,8 @@ if [[ $(xrandr -q | grep 'VGA1 connected') ]]; then
 fi
 
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor LVDS1 -d I II III IV V VI VII VIII IX X
+bspc monitor VGA-1 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         1
 bspc config window_gap          10
