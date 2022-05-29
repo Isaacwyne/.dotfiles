@@ -16,6 +16,7 @@ set encoding=utf-8                      " the encoding displayed
 set pumheight=10                        " make the popup menu smaller
 set cmdheight=1                         " more space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word
+set shortmess=I                         " disable the welcome screen message
 " set to auto read when a file is changed from the outside.
 set autoread
 au FocusGained,BufEnter * checktime

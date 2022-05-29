@@ -29,6 +29,10 @@ function yt-vid() {
     yt-dlp -f "best[height>=720]" -o '~/Videos/%(title)s.%(ext)s' $*
 }
 
+function yt-vid1() {
+    yt-dlp -f "best[height>=720]" -o '%(title)s.%(ext)s' $*
+}
+
 function yt-aud() {
     yt-dlp -f 'ba' -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s' $*
 }
