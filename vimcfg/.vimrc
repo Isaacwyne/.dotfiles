@@ -16,9 +16,8 @@ set encoding=utf-8                      " the encoding displayed
 set pumheight=10                        " make the popup menu smaller
 set cmdheight=1                         " more space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word
-set shortmess=I                         " disable the welcome screen message
-" set to auto read when a file is changed from the outside.
-set autoread
+set shortmess=sI                        " disable the welcome screen message
+set autoread                            " set to auto read when a file is changed from the outside.
 au FocusGained,BufEnter * checktime
 set mouse=a                             " enable the use of mouse              
 set conceallevel=0                      " so that `` can be seen in markdown Files
@@ -62,6 +61,7 @@ set tabstop=4                           " one tab == four spaces
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nu relativenumber                   " set numbering (relative)
+set numberwidth=2
 au InsertEnter * set norelativenumber   " set absolute numbers while in Insert mode
 au InsertLeave * set relativenumber     " set relative numbers when not in Insert mode
 
@@ -123,3 +123,7 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+
+" other plugins
+source $HOME/.vim/vim-plug/plugins.vim
+source $HOME/.vim/themes/airline.vim
