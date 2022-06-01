@@ -25,22 +25,35 @@ set showcmd                             " show incomplete commands at the bottom
 set backspace=indent,eol,start          " allow backspacing over indentation, line breaks, and insertion mode
 set history=1000                        " set a bigger history for executed commands
 set confirm                             " show a confirmation dialog when saving an unsaved file
+set matchpairs+=<:>                     " highlight matching pairs of brackets
 syntax enable
 let mapleader=" "                       " map leader to <space>
 let g:rehash256 = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use a line cursor within 'I' and a block cursor elsewhere
+"
+" Reference chart for values
+" Ps = 0 -> blinking block
+" Ps = 1 -> blinking block (default)
+" Ps = 2 -> steady block
+" Ps = 3 -> blinking underline
+" Ps = 4 -> steady underline
+" Ps = 5 -> blinking bar (xterm)
+" Ps = 6 -> steady bar (xterm)
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remap Keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " remap ESC to jk
-:imap jk <Esc>
+source $HOME/.vim/mappings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The lightline.vim theme
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " Always show statusline
@@ -54,8 +67,8 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab                           " Use spaces instead of tabs
 set smarttab                            " Be smart using tabs :)
-set shiftwidth=4                        " one tab == four spaces
-set tabstop=4                           " one tab == four spaces
+set shiftwidth=2                        " one tab == two spaces
+set tabstop=2                           " one tab == two spaces
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -95,18 +108,6 @@ set mouse=nicr
 " => Splits and Tabbed Files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set splitbelow splitright                           " horizontal and vertical splits will automatically be below and right respectively
-
-" Remap splits navigation to just CTRL + hjkl
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" Make adjusing split sizes a bit more friendly
-noremap <silent> <C-Left> :vertical resize +3<CR>
-noremap <silent> <C-Right> :vertical resize -3<CR>
-noremap <silent> <C-Up> :resize +3<CR>
-noremap <silent> <C-Down> :resize -3<CR>
 
 " Removes pipes | that act as seperators on splits
 set fillchars+=vert:\ 

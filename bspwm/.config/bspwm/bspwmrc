@@ -81,6 +81,9 @@ $HOME/.config/polybar/launch.sh &
 # Launch xsettingsd daemon
 xsettingsd &
 
+# Launch the power manager
+xfce4-power-manager &
+
 # polkit agent
 if [[ ! `pidof lxpolkit` ]]; then
   /usr/bin/lxpolkit &
