@@ -1,5 +1,6 @@
 alias pip='pip3'
-alias cat='batcat'
+alias cat='batcat --paging=never'
+alias python='python3'
 alias zshconf='nvim ~/.zshrc'
 alias bshconf='nvim ~/.bashrc'
 
@@ -29,6 +30,9 @@ alias fgrep='fgrep --color=auto'
 # others
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+
+alias nv='nvim'
+alias v='vim'
 
 ## Processes
 alias psa='ps auxf'
