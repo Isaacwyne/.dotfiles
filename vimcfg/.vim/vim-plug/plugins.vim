@@ -7,5 +7,7 @@ call plug#begin('~/.vim/autoload/plugged')
   " statusline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  " Escape Insert mode without lagging
+  Plug 'jdhao/better-escape.vim'
 
 call plug#end()
