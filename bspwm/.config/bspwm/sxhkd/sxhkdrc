@@ -13,8 +13,8 @@ super + shift + {f,b,e}
   {pcmanfm,brave-browser,codium}
 
 # terminal apps
-ctrl + alt + {v,r,h,n}
-  xfce4-terminal -e {vim,ranger,htop,nvim}
+ctrl + alt + {v,r,h,m,n}
+  xfce4-terminal -e {vim,ranger,htop,cmus,nvim}
         
 # make sxhkd reload its configuration files:
 super + Escape
