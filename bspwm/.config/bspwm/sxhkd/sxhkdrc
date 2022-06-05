@@ -44,7 +44,7 @@ XF86AudioRaiseVolume
 	pactl -- set-sink-volume 0 +5%
 
 XF86AudioLowerVolume
-        pactl -- set-sink-volume 0 -5%
+  pactl -- set-sink-volume 0 -5%
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -66,15 +66,15 @@ super + ctrl + {1-9}
 # Fullscreen or Monocle
 super + f
 #	bspc desktop -l next
-    bspc node -t "~"fullscreen
+  bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled.
 super + space
-    bspc node -t "~"{floating,tiled}
+  bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
 super + {p,t}
-    bspc node -t "~"{pseudo_tiled,tiled}
+  bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags
 super + ctrl + {m,x,y,z}
@@ -98,7 +98,7 @@ super + {Tab,grave}
 
 # Send focused window to another workspace
 super + {_,shift + }{1-9,0}
-        bspc {desktop -f,node -d} focused:'^{1-9,10}'
+  bspc {desktop -f,node -d} focused:'^{1-9,10}'
 
 # Expanding windows
 super + control + {h,j,k,l}
@@ -114,7 +114,7 @@ alt + shift + {h,j,k,l}
 
 # hide/unhide windows
 super + shift + i
-        winmask
+  winmask
 
 
 ##---------- EOF ----------##
