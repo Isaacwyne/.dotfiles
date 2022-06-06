@@ -1,7 +1,43 @@
+@import "styles/colors.rasi"
+@import "styles/dark-steel-blue.rasi"
+
+* {
+  background-color: @bg;
+  text-color: @foreground-list;
+  font: "JetBrainsMonoMedium Nerd Font 25";
+}
+
+window {
+  width: 45%;
+  padding: 20px;
+  border: 1px;
+  border-radius: 0px;
+  border-color: @border;
+  location: center;
+}
+
 inputbar {
   children: [entry];
 }
 
 listview {
+  layout: horizontal;
   lines: 5;
+}
+
+element.normal.normal,
+element.alternate.normal {
+  background-color: @background-light;
+  border-color: @background-light;
+}
+
+element.selected.normal {
+  background-color: @background-focus;
+  text-color: @accent;
+  border-color: @accent;
+}
+
+entry {
+  background-color: @background-light;
+  enabled: false;
 }
