@@ -3,13 +3,13 @@
 
 * {
   background-color: @bg;
-  text-color: @foreground-list;
+  text-color: @fg;
   font: "JetBrainsMonoMedium Nerd Font 25";
 }
 
 window {
   width: 45%;
-  padding: 20px;
+  padding: 15px;
   border: 1px;
   border-radius: 0px;
   border-color: @border;
@@ -25,19 +25,20 @@ listview {
   lines: 5;
 }
 
-element.normal.normal,
+element normal.normal,
 element.alternate.normal {
-  background-color: @background-light;
+  background-color: @bg;
   border-color: @background-light;
 }
 
-element.selected.normal {
+element selected.normal {
   background-color: @background-focus;
   text-color: @accent;
   border-color: @accent;
 }
 
 entry {
-  background-color: @background-light;
+  background-color: @fg;
+  text-color: @fg;
   enabled: false;
 }

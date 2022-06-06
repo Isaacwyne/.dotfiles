@@ -8,11 +8,13 @@ window {
   width: 30%;
   padding: 25px;
   border: 1px;
+  background-color: @bg;
   border-radius: 0px;
   border-color: @border;
   location: center;
 }
 
 entry {
+  background-color: @bg;
   expand: true;
 }

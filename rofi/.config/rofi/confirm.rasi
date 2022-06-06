@@ -6,13 +6,20 @@
 
 window {
   width: 35%;
-  padding: 25px;
+  padding: 20px;
+  background-color: @bg;
   border: 1px;
   border-radius: 0px;
   border-color: @border;
   location: center;
 }
 
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}
+
 entry {
+  background-color: @bg;
   expand: true;
 }
