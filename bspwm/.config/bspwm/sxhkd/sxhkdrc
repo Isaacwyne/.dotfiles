@@ -9,7 +9,7 @@ alt + F1
 ##---------- Applications -----------##
 
 # Launch apps
-super + shift + {f,b,e}
+super + {f,b,e}
   {pcmanfm,brave-browser,codium}
 
 # terminal apps
@@ -37,6 +37,14 @@ ctrl + alt + Escape
 # lockscreen
 ctrl + alt + l
   betterlockscreen --lock
+
+# emoji menu
+super + shift + e
+  rofi -show emoji
+
+# power
+super + x
+  $HOME/.local/bin/powermenu &
 
 ##---------- System keys ----------##
 # Volume control
