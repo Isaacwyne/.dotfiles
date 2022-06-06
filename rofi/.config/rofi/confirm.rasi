@@ -1,0 +1,18 @@
+@import "styles/colors.rasi"
+
+* {
+  font: "JetBrainsMonoMedium Nerd Font 10";
+}
+
+window {
+  width: 35%;
+  padding: 25px;
+  border: 1px;
+  border-radius: 0px;
+  border-color: @border;
+  location: center;
+}
+
+entry {
+  expand: true;
+}
