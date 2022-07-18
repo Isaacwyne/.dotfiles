@@ -11,8 +11,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="$PATH:$HOME/.local/bin"
+# export to path
+if ! [[ $PATH =~ "$HOME/.local/bin" ]]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
