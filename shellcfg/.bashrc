@@ -64,7 +64,9 @@ else
 fi
 
 # export to PATH
-export PATH="$PATH:$HOME/.local/bin"
+if ! [[ $PATH =~ "$HOME/.local/bin" ]]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
 
 # Alias definitions.
 if [ -f ~/.general/aliases ]; then
