@@ -1,8 +1,10 @@
 alias pip='pip3'
-alias cat='batcat --paging=never'
-alias python='python3'
-alias zshconf='nvim ~/.zshrc'
+alias cat='bat --paging=never'
+alias py='python3'
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias zshconf='nvim $ZDOTDIR/.zshrc'
 alias bshconf='nvim ~/.bashrc'
+alias pjts='~/Documents/projects'
 
 # confirm before overwriting something
 alias cp='cp -i'
