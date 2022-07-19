@@ -35,6 +35,7 @@ alias ip='ip --color=auto'
 
 alias nv='nvim'
 alias v='vim'
+alias vv='vimv'
 
 ## Processes
 alias psa='ps auxf'
